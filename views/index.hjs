@@ -2,23 +2,29 @@
 <html>
   <head>
     <title>{{ title }}</title>
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/javascripts/menu.js"></script>
   </head>
   <body>
 
-    <nav class="side-frame dock-right menu">
-        <ul class="unstyled">
-            <li>linkedin
-            <li>contact
-        </ul>
-    </nav>
+
 
     <div class="site-wrapper main-frame">
 
-        <a href="javascript:;" class=" menu-trigger is-active">
-            <i class="icon-default icon-menu"></i>
-            Menu
-        </a>
+      <nav class="js-navbar side-frame dock-right menu">
+        <ul class="unstyled">
+            <li><a href="" rel="nofollow">linkedin</a>
+            <li><a href="#contact_me_form" class="js-scroll" data-target="#contact_me_form" rel="nofollow">contact</a>
+        </ul>
+      </nav>
+
+      <a href="javascript:;" class="js-toggle menu-trigger is-active" data-action="js-navbar">
+        <i class="icon-default icon-menu"></i>
+        Menu
+      </a>
 
         <section class="slide ">
 

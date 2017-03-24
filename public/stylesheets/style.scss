@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 .site-wrapper {
   @include default-box;
   width: 100%;
@@ -74,25 +78,25 @@ section {
   width: 100%;
   height: 100vh;
 
-  &:nth-child(1) {
-    background: darkenBy($inverted-secondary, 1);
-  }
-  &:nth-child(2) {
-    background: darkenBy($inverted-secondary, 2);
-    background: url(../images/mtl-dtwn.jpg) no-repeat center center;
-    background-size: cover;
-  }
-  &:nth-child(3) {
-    background: darkenBy($inverted-secondary, 3);
-    background: url(../images/mtl-cafe.jpg) no-repeat center center;
-    background-size: cover;
-  }
-
   &.slide {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    &:nth-of-type(1) {
+      background: darkenBy($inverted-secondary, 2);
+      background: url(../images/mtl-dtwn.jpg) no-repeat center center;
+      background-size: cover;
+    }
+    &:nth-of-type(2) {
+      background: darkenBy($inverted-secondary, 3);
+      background: url(../images/mtl-cafe.jpg) no-repeat center center;
+      background-size: cover;
+    }
+    &:nth-of-type(3) {
+      background: darkenBy($inverted-secondary, 1);
+    }
 
     .content-box {
       @include default-box;
@@ -145,6 +149,7 @@ section {
   }
 }
 
+//*MENU*/
 .menu-trigger {
   @include default-box;
   position: fixed;
@@ -163,17 +168,46 @@ section {
   .icon-default {
     font-size: 16px;
     margin: 0 2px -2px;
+    color: $primary-color;
   }
 
 }
 
 nav.menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
+  left: auto;
+  display: inline-block;
+  min-width: 180px;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 0;
+  background: $bg-fog;
+  box-sizing: border-box;
+  transition: transform .5s;
+  z-index:1;
+
+  &.is-active {
+    transform: translate(0, 0);
+
+  }
 
   //1st lvl
   > ul {
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 4px 10px;
+      color: $primary-color;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darkenBy(red, 2);
+      }
+    }
 
     //2nd lvl
     ul {
@@ -223,6 +257,7 @@ nav.menu {
   &::before {
     height: 100%;
     border: .22em solid $primary-color;
+    border-color: inherit;
     border-left: none;
     border-right: none;
     background: transparent;
@@ -233,6 +268,7 @@ nav.menu {
   &::after {
     height: auto;
     border-top: .22em solid $primary-color;
+    border-color: inherit;
     top: 50%;
     transform: translate(0, -50%);
   }
@@ -243,6 +279,7 @@ nav.menu {
   width: 40px;
   height: 60px;
   border:1px solid red;
+  border-color: inherit;
 }
 
 
@@ -287,8 +324,9 @@ nav.menu {
       position: absolute;
       top: 0;
       left: 0;
-      padding: 10px;
+      padding: 15px;
       font-size: 14px;
+      line-height: 20px;
 
       &.is-active{
         display: block;
@@ -356,7 +394,7 @@ form {
     height: auto;
     font-size: 14px;
     line-height: 16px;
-    padding: 4px;
+    padding: 8px;
     resize: none;
   }
 

@@ -15,6 +15,9 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   overflow-x: hidden; }
 
+a {
+  text-decoration: none; }
+
 .site-wrapper {
   display: block;
   margin: 0;
@@ -69,21 +72,21 @@ section {
   position: relative;
   width: 100%;
   height: 100vh; }
-  section:nth-child(1) {
-    background: #335ad4; }
-  section:nth-child(2) {
-    background: #2546af;
-    background: url(../images/mtl-dtwn.jpg) no-repeat center center;
-    background-size: cover; }
-  section:nth-child(3) {
-    background: #1c3585;
-    background: url(../images/mtl-cafe.jpg) no-repeat center center;
-    background-size: cover; }
   section.slide {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; }
+    section.slide:nth-of-type(1) {
+      background: #2546af;
+      background: url(../images/mtl-dtwn.jpg) no-repeat center center;
+      background-size: cover; }
+    section.slide:nth-of-type(2) {
+      background: #1c3585;
+      background: url(../images/mtl-cafe.jpg) no-repeat center center;
+      background-size: cover; }
+    section.slide:nth-of-type(3) {
+      background: #335ad4; }
     section.slide .content-box {
       display: block;
       margin: 0;
@@ -140,12 +143,32 @@ section {
   z-index: 1; }
   .menu-trigger .icon-default {
     font-size: 16px;
-    margin: 0 2px -2px; }
+    margin: 0 2px -2px;
+    color: #111; }
 
 nav.menu {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0; }
+  right: 0;
+  left: auto;
+  display: inline-block;
+  min-width: 180px;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 0;
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  transition: transform .5s;
+  z-index: 1; }
+  nav.menu.is-active {
+    transform: translate(0, 0); }
+  nav.menu > ul a {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 10px;
+    color: #111; }
+    nav.menu > ul a:hover, nav.menu > ul a:focus, nav.menu > ul a:active {
+      color: #990000; }
   nav.menu > ul ul {
     display: block;
     margin: 0;
@@ -193,6 +216,7 @@ nav.menu {
   .icon-menu::before {
     height: 100%;
     border: 0.22em solid #111;
+    border-color: inherit;
     border-left: none;
     border-right: none;
     background: transparent;
@@ -201,13 +225,15 @@ nav.menu {
   .icon-menu::after {
     height: auto;
     border-top: 0.22em solid #111;
+    border-color: inherit;
     top: 50%;
     transform: translate(0, -50%); }
 
 .icon-experience {
   width: 40px;
   height: 60px;
-  border: 1px solid red; }
+  border: 1px solid red;
+  border-color: inherit; }
 
 .figure-wrapper {
   display: block;
@@ -235,7 +261,7 @@ nav.menu {
   width: 300px;
   height: 180px;
   position: relative;
-  background: rgba(255, 255, 255, 0.7); }
+  background: rgba(255, 255, 255, 0.85); }
   .carousel ul.slide-container {
     width: 100%;
     height: 100%; }
@@ -251,8 +277,9 @@ nav.menu {
       position: absolute;
       top: 0;
       left: 0;
-      padding: 10px;
-      font-size: 14px; }
+      padding: 15px;
+      font-size: 14px;
+      line-height: 20px; }
       .carousel ul.slide-container > li.is-active {
         display: block; }
       .carousel ul.slide-container > li .nav-tab {
@@ -282,7 +309,7 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   min-width: 320px; }
   form .input-group {
     display: block;
@@ -310,7 +337,7 @@ form {
     height: auto;
     font-size: 14px;
     line-height: 16px;
-    padding: 4px;
+    padding: 8px;
     resize: none; }
 
 /*# sourceMappingURL=style.css.map */
