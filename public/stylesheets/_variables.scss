@@ -43,8 +43,21 @@ $size-xsmall: 320px;
 //*ANIMATIONS*/
 @keyframes carousel {
   0%     {opacity: 0;}//0
-  2.5%   {opacity: 1;}//1.5
-  14%  {opacity: 1;}//7.5
-  15%    {opacity: 0;}//9s
-  100%   {opacity: 0;}//60s
+  2.5%   {opacity: 1;}//2.5
+  17.5%  {opacity: 1;} //7.5
+  20%    {opacity: 0;}//10s
+  100%   {opacity: 0;}//50s
 }
+
+@keyframes runningLine {
+  10%    {text-indent: 0;}
+  20%    {text-indent: -36px;}
+  35%    {text-indent: -36px;}
+  45%    {text-indent: -64px;}
+  50%    {text-indent: -64px;}
+  60%    {text-indent: -90px;}
+  75%    {text-indent: -90px;}
+  99.99% {text-indent: -120px;}
+  100%   {text-indent: 0;}
+}
+

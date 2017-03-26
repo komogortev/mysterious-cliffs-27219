@@ -3,12 +3,32 @@
     opacity: 0; }
   2.5% {
     opacity: 1; }
-  14% {
+  17.5% {
     opacity: 1; }
-  15% {
+  20% {
     opacity: 0; }
   100% {
     opacity: 0; } }
+
+@keyframes runningLine {
+  10% {
+    text-indent: 0; }
+  20% {
+    text-indent: -36px; }
+  35% {
+    text-indent: -36px; }
+  45% {
+    text-indent: -64px; }
+  50% {
+    text-indent: -64px; }
+  60% {
+    text-indent: -90px; }
+  75% {
+    text-indent: -90px; }
+  99.99% {
+    text-indent: -120px; }
+  100% {
+    text-indent: 0; } }
 
 * {
   margin: 0;
@@ -246,8 +266,8 @@ nav.menu {
 
 .icon-experience {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: relative; }
   .icon-experience::before {
     content: '';
@@ -255,14 +275,14 @@ nav.menu {
     width: 15px;
     height: 14px;
     position: absolute;
-    top: 52%;
-    left: 22%;
+    top: 50%;
+    left: 50%;
     background: transparent;
     border-top: 13px groove #ff0000;
     border-left: 13px ridge #ff0000;
     border-right: 6px groove transparent;
     border-bottom: 6px ridge transparent;
-    transform: rotate(56deg) skew(23deg); }
+    transform: rotate(56deg) skew(23deg) translate(-34%, 50%); }
   .icon-experience::after {
     content: '6';
     display: inline-block;
@@ -293,8 +313,8 @@ nav.menu {
 
 .icon-cmd {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: relative; }
   .icon-cmd::before {
     content: 'c:\\ ...';
@@ -309,12 +329,13 @@ nav.menu {
     padding: 4px;
     color: #111;
     font-style: normal;
+    line-height: 12px;
     background: rgba(255, 255, 255, 0.85);
     box-sizing: border-box;
-    border-top: 6px solid #111;
-    border-right: 2px outset #111;
-    border-bottom: 2px outset #111;
-    border-left: 2px inset #111;
+    border-top: 6px solid #0000fe;
+    border-right: 2px outset #0000fe;
+    border-bottom: 2px outset #0000fe;
+    border-left: 2px inset #0000fe;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.85); }
   .icon-cmd::after {
     content: '';
@@ -325,28 +346,28 @@ nav.menu {
     top: 40%;
     right: 6%;
     background: transparent;
-    border: 2px dotted #919191;
+    border: 2px dotted #5e5e5e;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 5px #919191; }
+    box-shadow: inset 0 0 0 5px #5e5e5e; }
   .icon-cmd:hover::before, .icon-cmd:active::before, .icon-cmd:focus::before {
     color: black;
     background: rgba(204, 204, 204, 0.85);
-    border-top: 6px solid black;
-    border-right: 2px outset black;
-    border-bottom: 2px outset black;
-    border-left: 2px inset black;
+    border-top: 6px solid #000098;
+    border-right: 2px outset #000098;
+    border-bottom: 2px outset #000098;
+    border-left: 2px inset #000098;
     box-shadow: 0 0 2px rgba(204, 204, 204, 0.85); }
   .icon-cmd:hover::after, .icon-cmd:active::after, .icon-cmd:focus::after {
-    border: 2px dotted #5e5e5e;
-    box-shadow: inset 0 0 0 5px #5e5e5e; }
+    border: 2px dotted #2b2b2b;
+    box-shadow: inset 0 0 0 5px #2b2b2b; }
 
 .icon-browser {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: relative; }
   .icon-browser::before {
-    content: '';
+    content: 'HTML, CSS, JS & MORE... HTML,';
     display: block;
     width: 80%;
     height: 65%;
@@ -360,26 +381,84 @@ nav.menu {
     font-style: normal;
     background: rgba(255, 255, 255, 0.85);
     box-sizing: border-box;
-    border-top: 4px dashed #111;
-    border-right: 2px outset #111;
-    border-bottom: 2px outset #111;
-    border-left: 2px inset #111;
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.85); }
+    border-top: 4px dashed #5e5e5e;
+    border-right: 2px outset #919191;
+    border-bottom: 2px outset #919191;
+    border-left: 2px inset #919191;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.85);
+    animation: runningLine 20s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    white-space: nowrap; }
   .icon-browser::after {
     content: '';
     display: block;
-    width: 16px;
-    height: 26px;
+    width: 14px;
+    height: 21px;
     position: absolute;
-    top: 40%;
-    right: 2%;
+    top: 27%;
+    right: 4%;
     background: rgba(255, 255, 255, 0.85);
-    border-top: 3px solid #111;
-    border-right: 3px outset #111;
+    border-radius: 5px;
+    border-top: 2px solid #111;
+    border-right: 2px outset #111;
     border-bottom: 8px outset #111;
-    border-left: 3px inset #111;
+    border-left: 2px inset #111;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.85); }
   .icon-browser:hover::before, .icon-browser:active::before, .icon-browser:focus::before {
+    color: black;
+    background: rgba(204, 204, 204, 0.85);
+    border-top: 4px dashed #2b2b2b;
+    border-right: 2px outset #5e5e5e;
+    border-bottom: 2px outset #5e5e5e;
+    border-left: 2px inset #5e5e5e;
+    box-shadow: 0 0 2px rgba(204, 204, 204, 0.85); }
+  .icon-browser:hover::after, .icon-browser:active::after, .icon-browser:focus::after {
+    background: rgba(204, 204, 204, 0.85);
+    border-top: 2px solid black;
+    border-right: 2px outset black;
+    border-bottom: 8px outset black;
+    border-left: 2px inset black;
+    box-shadow: 0 0 2px rgba(204, 204, 204, 0.85); }
+
+.icon-design {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative; }
+  .icon-design::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 5%;
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translate(-50%, 0) skew(50deg);
+    font-size: 10px;
+    padding: 4px;
+    color: #111;
+    font-style: normal;
+    background: rgba(255, 255, 255, 0.85);
+    box-sizing: border-box;
+    border: 2px solid #111; }
+  .icon-design::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 16px;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    background: #ff0;
+    border-radius: 5px;
+    border-top: 2px solid transparent;
+    border-right: 2px outset transparent;
+    border-bottom: 8px outset #f00;
+    border-left: 2px inset transparent;
+    transform: translate(-50%, -50%) rotate(30deg);
+    box-shadow: 0 6px 0 -1px #f00; }
+  .icon-design:hover::before, .icon-design:active::before, .icon-design:focus::before {
     color: black;
     background: rgba(204, 204, 204, 0.85);
     border-top: 4px dashed black;
@@ -387,13 +466,78 @@ nav.menu {
     border-bottom: 2px outset black;
     border-left: 2px inset black;
     box-shadow: 0 0 2px rgba(204, 204, 204, 0.85); }
-  .icon-browser:hover::after, .icon-browser:active::after, .icon-browser:focus::after {
+  .icon-design:hover::after, .icon-design:active::after, .icon-design:focus::after {
     background: rgba(204, 204, 204, 0.85);
-    border-top: 3px solid black;
-    border-right: 3px outset black;
+    border-top: 2px solid black;
+    border-right: 2px outset black;
     border-bottom: 8px outset black;
-    border-left: 3px inset black;
+    border-left: 2px inset black;
     box-shadow: 0 0 2px rgba(204, 204, 204, 0.85); }
+
+.icon-eye {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative; }
+  .icon-eye::before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 55%;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-30%, 0);
+    font-size: 10px;
+    padding: 4px;
+    color: #111;
+    font-style: normal;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,edfcff+10,ff2a05+10,ff1e1e+19,e8fcfc+29,00a545+29,00c472+41,f3ffea+46,eafff1+49,0030f2+49,0b54ef+60,ffffff+65,f2e1ed+71,f407b5+71,ff0c4d+81,ededef+88,eff6ff+93,870002+94 */
+    background: white;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, white 0%, #edfcff 10%, #ff2a05 10%, #ff1e1e 19%, #e8fcfc 29%, #00a545 29%, #00c472 41%, #f3ffea 46%, #eafff1 49%, #0030f2 49%, #0b54ef 60%, white 65%, #f2e1ed 71%, #f407b5 71%, #ff0c4d 81%, #ededef 88%, #eff6ff 93%, #870002 94%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, white 0%, #edfcff 10%, #ff2a05 10%, #ff1e1e 19%, #e8fcfc 29%, #00a545 29%, #00c472 41%, #f3ffea 46%, #eafff1 49%, #0030f2 49%, #0b54ef 60%, white 65%, #f2e1ed 71%, #f407b5 71%, #ff0c4d 81%, #ededef 88%, #eff6ff 93%, #870002 94%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, white 0%, #edfcff 10%, #ff2a05 10%, #ff1e1e 19%, #e8fcfc 29%, #00a545 29%, #00c472 41%, #f3ffea 46%, #eafff1 49%, #0030f2 49%, #0b54ef 60%, white 65%, #f2e1ed 71%, #f407b5 71%, #ff0c4d 81%, #ededef 88%, #eff6ff 93%, #870002 94%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#870002',GradientType=0 );
+    /* IE6-9 */
+    box-sizing: border-box;
+    border-top: 1px solid #111;
+    border-right: 1px solid #111;
+    border-bottom: 1px solid #111;
+    border-left: 1px solid #111;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.85);
+    animation: runningLine 20s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    white-space: nowrap; }
+  .icon-eye::after {
+    content: 'O';
+    display: block;
+    width: 40%;
+    height: 0;
+    padding: 20% 0 20%;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1px;
+    font-style: normal;
+    text-align: center;
+    color: #111;
+    top: 38%;
+    left: 16%;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 75% 15%;
+    transform: rotate(45deg);
+    border: 2px solid #111; }
+  .icon-eye:hover::before, .icon-eye:active::before, .icon-eye:focus::before {
+    box-shadow: inset 0 0 0 20px rgba(0, 0, 0, 0.25); }
+  .icon-eye:hover::after, .icon-eye:active::after, .icon-eye:focus::after {
+    color: black;
+    background: rgba(204, 204, 204, 0.85);
+    border: 2px solid black; }
 
 .figure-wrapper {
   display: block;
@@ -446,19 +590,17 @@ nav.menu {
       .carousel ul.slide-container > li span {
         display: block;
         opacity: 0;
-        animation: carousel 60s;
+        animation: carousel 50s;
         animation-delay: 0s;
         animation-iteration-count: infinite; }
       .carousel ul.slide-container > li:nth-of-type(2) span {
-        animation-delay: 10s; }
+        animation-delay: 10.5s; }
       .carousel ul.slide-container > li:nth-of-type(3) span {
-        animation-delay: 20s; }
+        animation-delay: 20.5s; }
       .carousel ul.slide-container > li:nth-of-type(4) span {
-        animation-delay: 30s; }
+        animation-delay: 30.5s; }
       .carousel ul.slide-container > li:nth-of-type(5) span {
-        animation-delay: 40s; }
-      .carousel ul.slide-container > li:nth-of-type(6) span {
-        animation-delay: 50s; }
+        animation-delay: 40.5s; }
       .carousel ul.slide-container > li.is-active {
         display: block; }
       .carousel ul.slide-container > li .nav-tab {

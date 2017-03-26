@@ -54,12 +54,10 @@
                   <span>Design and integrate ecommerce web sites using HTML, CSS, Javascript, jQuery for interactivity,
                     integrate the mock-ups with e-commerce platform developed internally and technical supports after
                     customers on using the k-eCommerce solution (platform developed by kCentric.NET)</span></li>
-                <li class="is-active"><i class="js-action icon-custom icon-experience nav-tab"></i>
-                  <span>Design sites that are functional, have a clean look, and provide clear and friendly navigation
-                    and easy accessibility and better User Experience.</span>
-                </li>
                 <li class="is-active"><i class="js-action icon-custom icon-eye nav-tab"></i>
-                  <span>Validate usability on different browsers, and troubleshoot code where required.</span>
+                  <span>Design sites that are functional, have a clean look, and provide clear and friendly navigation
+                    and easy accessibility and better User Experience.
+                    Validate usability on different browsers, and troubleshoot code where required.</span>
                 </li>
               </ul>
             </div>
