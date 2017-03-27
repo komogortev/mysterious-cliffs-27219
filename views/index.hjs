@@ -16,8 +16,9 @@
 
       <nav class="js-navbar side-frame dock-right menu">
         <ul class="unstyled">
-            <li><a href="" rel="nofollow">linkedin</a>
-            <li><a href="#contact_me_form" class="js-scroll" data-target="#contact_me_form" rel="nofollow">contact</a>
+            <li><a href="https://ca.linkedin.com/in/igor-komogortev-bb853657" target="_blank" rel="nofollow"><i class="icon-default icon-linkedin"></i>linkedin</a>
+            <li><a href="https://github.com/komogortev" target="_blank" rel="nofollow"><i class="icon-default icon-github"></i>github</a>
+            <li><a href="#contact_me_form" class="js-scroll" data-target="#contact_me_form" rel="nofollow"><i class="icon-default icon-contact"></i>contact</a>
         </ul>
       </nav>
 
@@ -76,7 +77,7 @@
                 </div>
                 <div class="input-group">
                   <label class="input-group-addon" id="name-label">Email</label>
-                  <input name="email" id="email" type="email" class="form-control" placeholder="Email (required)" aria-describedby="basic-addon2">
+                  <input name="email" id="email" type="email" class="form-control" placeholder="Email (required)" aria-describedby="basic-addon2" required="required">
                   <span class="input-group-addon" id="email_error" style="display:none;">Email is Required</span>
                 </div>
                 <div class="input-group">
@@ -105,6 +106,14 @@
 
         <p>.end</p>
       </section>
+
+
+      <footer>
+        powered by <a href="https://nodejs.org/" target="_blank" rel="nofollow"><i class="icon-default icon-nodejs"></i></a>
+        <a href="https://www.w3.org/TR/html5/"><i class="icon-default icon-html" target="_blank" rel="nofollow"></i></a>
+        <a href="https://www.w3.org/standards/techs/css#w3c_all"><i class="icon-default icon-css" target="_blank" rel="nofollow"></i></a>
+        <a href="https://www.javascript.com/"><i class="icon-default icon-js" target="_blank" rel="nofollow"></i></a>
+      </footer>
 
     </div>
 
