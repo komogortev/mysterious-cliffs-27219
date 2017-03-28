@@ -16,6 +16,7 @@
 
       <nav class="js-navbar side-frame dock-right menu">
         <ul class="unstyled">
+            <li><a href="../documents/Web_Developer-Igor_Komogortev.pdf" target="_blank" rel="nofollow"><i class="icon-default icon-pdf"></i>resume</a>
             <li><a href="https://ca.linkedin.com/in/igor-komogortev-bb853657" target="_blank" rel="nofollow"><i class="icon-default icon-linkedin"></i>linkedin</a>
             <li><a href="https://github.com/komogortev" target="_blank" rel="nofollow"><i class="icon-default icon-github"></i>github</a>
             <li><a href="#contact_me_form" class="js-scroll" data-target="#contact_me_form" rel="nofollow"><i class="icon-default icon-contact"></i>contact</a>

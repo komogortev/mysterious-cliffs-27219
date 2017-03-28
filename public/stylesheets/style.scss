@@ -24,6 +24,7 @@ a {
 .site-wrapper {
   @include default-box;
   width: 100%;
+  min-width: $break-xsmall;
   position:relative;
 }
 
@@ -104,10 +105,14 @@ section {
       max-width: 100%;
       max-height: 100%;
 
-
       &.content-bio {
         display: flex;
         flex-direction: row;
+
+        @media screen and (max-width: $break-medium) {
+          flex-direction: column;
+        }
+
       }
     }
   }
@@ -639,6 +644,33 @@ nav.menu {
   }
 }
 
+.icon-pdf {
+  &::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    background: url('../images/icon-pdf.png') no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  a:hover &,
+  a:focus &,
+  a:active & {
+    &::before {
+      background: url('../images/icon-pdf-active.png') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
 .icon-github {
   &::before {
     content: '';
@@ -749,6 +781,10 @@ nav.menu {
   transform: translate(0, -20%);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
 
+  @media screen and (max-width: $break-medium) {
+    margin: 10px auto;
+  }
+
   img {
     display:inline-block;
      width: 100%;
@@ -851,7 +887,7 @@ form {
   align-items: center;
   padding: 10px;
   background: $bg-fog;
-  min-width: $size-xsmall;
+  min-width: $break-xsmall;
 
   .input-group {
     @include default-box;
@@ -885,12 +921,15 @@ form {
 
 //*FOOTER*/
 footer {
+  @include default-box;
   position: fixed;
   bottom: 0;
-  left:50%;
-  font-size:12px;
+  left: 50%;
+  min-width: $break-xsmall;
+  font-size: 12px;
   color: $inverted-primary;
   text-shadow: 0 0 2px rgba(0,0,0,.5);
+  text-align: center;
   transform: translate(-50%, 0);
   vertical-align: middle;
 
