@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | platfom2d</title>
     <link rel="shortcut icon" href="../assets/TemplateData/favicon.ico">
-    <link rel="stylesheet" href="../assetsTemplateData/style.css">
-    <script src="../assetsTemplateData/UnityProgress.js"></script>  
-    <script src="../assetsBuild/UnityLoader.js"></script>
+    <link rel="stylesheet" href="../assets/TemplateData/style.css">
+    <script src="../assets/TemplateData/UnityProgress.js"></script>  
+    <script src="../assets/Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "../assetsBuild/builds.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "../assets/Build/builds.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
@@ -23,3 +23,4 @@
     </div>
   </body>
 </html>
+
