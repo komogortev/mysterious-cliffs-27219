@@ -5,7 +5,7 @@ var router = express.Router();
 var prompt = require('prompt');
 
 //get db //@todo uncomment and adjust after proper db connected
-//var teamdata = require('../model/teams');
+    //var teamdata = require('../model/teams');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

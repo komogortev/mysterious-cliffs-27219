@@ -10,6 +10,7 @@ var prompt = require('prompt');
 var home = require('./home');
 var users = require('./users');
 var contact = require('./contact');
+var contact = require('./platform2d');
 
 
 router.use('/', home);
@@ -18,6 +19,8 @@ router.use('/home', home);
 router.use('/users', users);
 
 router.use('/contact', contact);
+
+router.use('/platform2d', platform2d);
 
 
 module.exports = router;
